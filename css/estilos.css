@@ -112,13 +112,12 @@ header .contenedor-texto .texto .profesion {
 	line-height: 34px;
 	margin-bottom: 40px;
 	font-weight: 300;
-	color: #361134;
+	color: #610345;
 	text-align: center;
 }
 
 .main .acerca-de .texto .bold {
-	color: #3895ea;
-	text-decoration: underline;
+	color: #610345;
 }
 
 .main .trabajos {
@@ -135,7 +134,7 @@ header .contenedor-texto .texto .profesion {
 	line-height: 34px;
 	margin-bottom: 40px;
 	font-weight: 300;
-	color: #323068;
+	color: #005fef;
 	text-align: center;
 }
 
@@ -264,9 +263,8 @@ footer .redes-sociales a {
 	margin: 0 20px;
 }
 
-footer .redes-sociales .twitter:hover {	background: #1da1f2; }
+footer .redes-sociales .linkedin:hover {	background: #1da1f2; }
 footer .redes-sociales .facebook:hover { background: #3b5998; }
-footer .redes-sociales .youtube:hover {	background: #cd201f; }
 footer .redes-sociales .github:hover { background: #666666; }
 footer .redes-sociales .instagram:hover { background: #3f729b; }
 
