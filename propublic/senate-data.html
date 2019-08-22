@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Senate Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <img class="col-md-8 img-fluid" src="img/logo.jpg" alt="logo">
+            </div>
+            <div class="offset-4 offset-md-10">
+                <a href="mailto:info@tgif.net">info@tgif.net</a>
+            </div>
+        </div>
+        <nav class="navbar navbar-nav navbar-expand bg-dark navbar-dark ">
+            <ul class="navbar-nav mr-auto">
+                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Congress 113
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="house-data.html">House Data</a>
+                        <a class="dropdown-item" href="#">Senate Data</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Attendance
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="house-attendance.html">House</a>
+                        <a class="dropdown-item" href="senate-attendance.html">Senate</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Party Loyalty
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="house-party-loyalty.html">House Data</a>
+                        <a class="dropdown-item" href="senate-party-loyalty.html">Senate</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 col-md-5 ">
+                    <h1>Senators</h1>
+                    <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid table-responsive">
+            <div>
+                <form id="checkboxfilter">
+                    <label>Filter by Party: </label>
+                    <input type="checkbox" checked name="checkbox" value="D" onchange="updateTable(app.filter)" id="checkbox-democrat">Democrat
+                    <input type="checkbox" checked name="checkbox" value="R" onchange="updateTable(app.filter)" id="checkbox-republican">Republican
+                    <input type="checkbox" checked name="checkbox" value="I" onchange="updateTable(app.filter)" id="checkbox-independent">Independent
+                    <label>States:</label>
+                    <select name="drop-menu" onchange="updateTable(app.filter)" id="drop-menu">
+                        <option value="All">All</option>
+                        <option value="AK">AK</option>
+                        <option value="AL">AL</option>
+                        <option value="AR">AR</option>
+                        <option value="AZ">AZ</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="IA">IA</option>
+                        <option value="ID">ID</option>
+                        <option value="HI">HI</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="MA">MA</option>
+                        <option value="MD">MD</option>
+                        <option value="ME">ME</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MO">MO</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="NE">NE</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NV">NV</option>
+                        <option value="NY">NY</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VA">VA</option>
+                        <option value="VT">VT</option>
+                        <option value="WA">WA</option>
+                        <option value="WI">WI</option>
+                        <option value="WV">WV</option>
+                        <option value="WY">WY</option>
+                        
+                    </select>
+                </form>
+            </div>
+            <table class="table table-hover table-borderless" id="table-data">
+                
+                <div id="app-1">
+                    <tbody id="appTable">
+                        <tr v-for="value in object">
+                            <td> <a v-bind:href="value.url"> {{value.first_name}} {{value.middle_name}} {{value.last_name}} </a></td>
+                            <td>{{ value.party }}</td>
+                            <td>{{value.state}}</td>
+                            <td>{{value.seniority}}</td>
+                            <td>{{value.votes_with_party_pct}}</td>
+                        </tr>
+                    </tbody>
+                </div>
+            </table>
+        </div>
+    </section>
+    <footer class="container-fluid justify-content-center d-flex">
+        <p> &copy; 2019 &#8739 All Right Reserved</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/task4.js"></script>
+    <script src="js/task2.js"></script>
+</body>
+</html> 

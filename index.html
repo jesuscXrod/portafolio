@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no,
-	 initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Jesus Rodriguez - Front End developer</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<script src="https://kit.fontawesome.com/5e2c7bdb65.js"></script>
 </head>
 <body>
 	<header>
@@ -16,7 +15,7 @@
 			<nav class="menu">
 				<a href="#acerca">Acerca de</a>
 				<a href="#portafolio">Portafolio</a>
-				<a href="#">Contacto</a>
+				<a href="#contacto">Contacto</a>
 			</nav>
 
 			<div class="contenedor-texto">
@@ -38,7 +37,7 @@
 				<div class="texto">
 					<h3 class="titulo">Acerca de</h3>
 					<p>Soy Jesús Rodríguez, <span class="bold">Front-end Developer </span>en Buenos Aires, Argentina. Actualmente estoy cursando la carrera de <span class="bold">Fullstack Web Developer</span> en la academia MindHub.</p>
-					<p>Simultaneamente a mi carrera estoy aprendiendo de <span class="bold">ReactJS</span> por mi cuenta para ampliar mis recursos en el desarrollo del Front-end.</p>
+					<p>Simultaneamente a mi carrera estoy en constante aprendizaje de las librerias de JavaScript como: <span class="bold">ReactJS y VueJS</span> para ampliar mis recursos como desarrollador Front-end.</p>
 				</div>
 			</div>
 		</section>
@@ -47,42 +46,29 @@
 				<h3 class="titulo" id="portafolio">Portafolio</h3>
 				<div class="contenedor-trabajos">
 					<div class="trabajo">
-						<div>
-							<h3>En construcción</h3>
-						</div>
 						<div class="thumb">
-							<img src="img/trabajos/1.jpg" alt="Lorem Ipsum">
+							<img src="img/trabajos/portfolio-1.png" alt="Portafolio">
 						</div>
-						<div class="descripcion">
-							<p class="nombre">Lorem Ipsum</p>
-							<p class="categoria">HTML - CSS - PHP</p>
-						</div>
+						<article class="descripcion">
+							<p class="nombre"><a href="propublic/home.html">Propublic</a></p>
+							<p class="categoria">Tecnologias utilizadas:</p>
+							<p class="icons"><i class="fab fa-html5"></i><i class="fab fa-bootstrap"></i><i class="fab fa-js-square"></i><i class="fab fa-vuejs"></i></p>
+						</article>
 					</div>
-					
+				</div>
 				</div>
 			</div>
 		</section>
 	</section>
 
 	<footer>
-		<section class="contacto">
+		<section class="redes-sociales" id="contacto">
+			<h3 class="titulo">Contacto</h3>
 			<div class="contenedor">
-				<h3 class="titulo">Contacto</h3>
-				<form class="formulario" action="">
-					<input type="text" placeholder="Nombre" name="nombre" required>
-					<input type="email" placeholder="Correo" name="correo" required>
-					<textarea name="mensaje" placeholder="Mensaje:"></textarea>
-					<input class="boton" type="submit" value="Enviar">
-				</form>
-			</div>
-		</section>
-
-		<section class="redes-sociales">
-			<div class="contenedor">
-				<a class="facebook" href="https://www.facebook.com/JChivoxRod"><i class="fa fa-facebook"></i></a>
-				<a class="linkedin" href="https://www.linkedin.com/in/jesusrod/"><i class="fa fa-linkedin"></i></a>
-				<a class="github" href="http://www.github.com/jesuscXrod"><i class="fa fa-github"></i></a>
-				<a class="instagram" href="http://www.instagram.com/jcxrod"><i class="fa fa-instagram"></i></a>
+				<a class="facebook" href="https://www.facebook.com/JChivoxRod"><i class="fab fa-facebook-square"></i></a>
+				<a class="linkedin" href="https://www.linkedin.com/in/jesusrod/"><i class="fab fa-linkedin"></i></a>
+				<a class="github" href="http://www.github.com/jesuscXrod"><i class="fab fa-github"></i></a>
+				<a class="instagram" href="http://www.instagram.com/jcxrod"><i class="fab fa-instagram"></i></a>
 			</div>
 		</section>
 	</footer>
