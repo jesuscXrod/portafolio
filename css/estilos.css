@@ -245,11 +245,11 @@ footer .redes-sociales .instagram:hover { background: #3f729b; }
 /* ----- ----- MEDIA QUERIES ----- ----- */
 @media screen and (max-width: 800px) {
 	header .menu {
-		text-align: center;
+		display: flex;
 	}
 
 	.main .trabajos .contenedor-trabajos .trabajo {
-		width: 46%;
+		width: 48%;
 	}
 }
 
@@ -263,7 +263,6 @@ footer .redes-sociales .instagram:hover { background: #3f729b; }
 	}
 
 	footer .redes-sociales .contenedor {
-		flex-wrap:wrap;
 		padding: 20px 0;
 	}
 }
